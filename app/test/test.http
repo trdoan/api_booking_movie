@@ -1,0 +1,20 @@
+GET http://localhost:3003/user
+###
+POST http://localhost:3003/auth/sign-in
+content-type: application/json
+
+{
+	"email":"user1@gmail.com",
+	"password":"123456"
+}
+###
+POST http://localhost:3003/auth/sign-up
+content-type: application/json
+
+{
+	"fullName":"User",
+	"email":"user1@gmail.com",
+	"password":"123456",
+	"repeat_password":"123456",
+	"sex":"MALE"
+}
