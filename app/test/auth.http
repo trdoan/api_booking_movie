@@ -1,20 +1,27 @@
-GET http://localhost:3003/user
-###
+### SIGN_IN
 POST http://localhost:3003/auth/sign-in
 content-type: application/json
 
 {
-	"email":"user1@gmail.com",
+	"email":"1951150012@sv.ut.edu.vn",
 	"password":"123456"
 }
-###
+### SIGN_UP
 POST http://localhost:3003/auth/sign-up
 content-type: application/json
 
 {
 	"fullName":"User",
-	"email":"user1@gmail.com",
+	"email":"user001@gmail.com",
 	"password":"123456",
 	"repeat_password":"123456",
 	"sex":"MALE"
+}
+
+### FORGOT_PASSWORD
+POST http://localhost:3003/auth/forgot-my-password
+content-type: application/json
+
+{
+    "email":"1951150012@sv.ut.edu.vn"
 }

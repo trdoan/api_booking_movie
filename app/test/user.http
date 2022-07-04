@@ -1,0 +1,25 @@
+###
+GET http://localhost:3003/user/1
+###
+delete http://localhost:3003/user/21
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJEb2FuIEFkbWluIiwic2V4IjoiTUFMRSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjQxMDM0Mn0.2PXsCPUIYV95cPXpArzLhkIvB7lU4xSUSsYJOeV-WNs
+
+
+###
+GET http://localhost:3003/user
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImZ1bGxOYW1lIjoiVXNlciIsInNleCI6Ik1BTEUiLCJpYXQiOjE2NTYzMDY5MTR9.8QLb5G_2N3sT7sXiqRWxPcMspVUB2Yo6BkqctQ--k
+###
+
+POST http://localhost:3003/user
+content-type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImZ1bGxOYW1lIjoiVXNlciIsInNleCI6Ik1BTEUiLCJpYXQiOjE2NTYzMDY5MTR9.8QLb5G_2N3sT7sXiqRWxPcMspVUB2Yo6BkqctQ--k
+
+{
+    "fullName": "Doan Admin",
+    "sex": "MALE",
+    "email": "tranduongdoan0922@gmail.com",
+    "password": "123456",
+    "role": "ADMIN",
+    "avatar": null
+}
+###

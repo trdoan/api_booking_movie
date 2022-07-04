@@ -1,0 +1,15 @@
+GET http://localhost:3003/movie/1
+###
+POST http://localhost:3003/movie
+Content-Type: application/json
+
+{
+      "title": "Phim Hay",
+    "description": "Phim này cực hay",
+    "director": "Huỳnh Công Hiếu",
+    "actor":"A,b,c",
+    "rate": 9,
+    "trailer":"",
+    "time": 90,
+    "startTime": "2022-08-09"
+}

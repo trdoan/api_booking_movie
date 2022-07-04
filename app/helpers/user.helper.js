@@ -1,5 +1,5 @@
 const faker = require("faker");
-const { hashPassword } = require("./bcrypt.helper");
+const { hashPassword } = require("./auth.helper");
 // config language for faker
 faker.locale = "vi";
 

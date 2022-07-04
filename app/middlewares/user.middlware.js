@@ -9,9 +9,10 @@ const checkUserExits = (prefix) => {
         email,
       },
     });
-    console.log(prefix);
+
     if (prefix) {
       if (user) {
+        req.user = user;
         next();
       } else {
         next(createError.NotFound("Người dùng không tồn tại"));
