@@ -9,5 +9,9 @@ const listMovie = [];
     rate: 9,
     trailer: "https://www.youtube.com/watch?v=IosqnBOkk2I",
     poster: "",
+    createdAt: "2022-06-25",
+    updatedAt: "2022-06-25",
   })
 );
+
+module.exports = {listMovie}

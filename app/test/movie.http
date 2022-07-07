@@ -1,5 +1,7 @@
 GET http://localhost:3003/movie/1
 ###
+GET http://localhost:3003/movie
+###
 POST http://localhost:3003/movie
 Content-Type: application/json
 

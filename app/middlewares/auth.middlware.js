@@ -7,15 +7,12 @@ const verifyToken = (req, res, next) => {
     req.user = isValid;
     next();
   } catch (error) {
-    next(
-      createError.Unauthorized("Bạn cần đăng nhập để thực hiện chức năng này")
-    );
+    next(createError.Unauthorized("Bạn cần đăng nhập để thực hiện chức năng này"));
   }
 };
 const authorize = (listRole) => {
   return async (req, res, next) => {
     const { user } = req;
-    console.log(listRole.includes(user.role), user);
     if (listRole.includes(user.role)) {
       next();
     } else {

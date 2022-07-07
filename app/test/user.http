@@ -1,15 +1,14 @@
-###
-GET http://localhost:3003/user/1
-###
-delete http://localhost:3003/user/21
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJEb2FuIEFkbWluIiwic2V4IjoiTUFMRSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjQxMDM0Mn0.2PXsCPUIYV95cPXpArzLhkIvB7lU4xSUSsYJOeV-WNs
-
-
-###
+### get user list
 GET http://localhost:3003/user
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImZ1bGxOYW1lIjoiVXNlciIsInNleCI6Ik1BTEUiLCJpYXQiOjE2NTYzMDY5MTR9.8QLb5G_2N3sT7sXiqRWxPcMspVUB2Yo6BkqctQ--k
-###
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJEb2FuIEFkbWluIiwic2V4IjoiTUFMRSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjkyNDE2MH0.UJqAuDQbDkrfHbO1BZHhMTiABlvQXun6sIOqVThKhRI
+### get user by id
+GET http://localhost:3003/user/1
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJEb2FuIEFkbWluIiwic2V4IjoiTUFMRSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjkyNDE2MH0.UJqAuDQbDkrfHbO1BZHhMTiABlvQXun6sIOqVThKhRI
 
+###
+GET http://localhost:3003/user/get-info-by-me
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiIxOTUxMTUwMDEyQHN2LnV0LmVkdS52biIsImZ1bGxOYW1lIjoiRG9hbiBBZG1pbiIsInNleCI6Ik1BTEUiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NTY5MjUxMjd9.JtYE4i-658n6mY38MuK_F9youEx8plxmbZQrWHTAxwI
+### create new user
 POST http://localhost:3003/user
 content-type: application/json
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImZ1bGxOYW1lIjoiVXNlciIsInNleCI6Ik1BTEUiLCJpYXQiOjE2NTYzMDY5MTR9.8QLb5G_2N3sT7sXiqRWxPcMspVUB2Yo6BkqctQ--k
@@ -22,4 +21,8 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImZ1bGxOYW1lIjoiVXNlciIs
     "role": "ADMIN",
     "avatar": null
 }
-###
+
+
+### delete user
+delete http://localhost:3003/user/21
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbE5hbWUiOiJEb2FuIEFkbWluIiwic2V4IjoiTUFMRSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjkyNDE2MH0.UJqAuDQbDkrfHbO1BZHhMTiABlvQXun6sIOqVThKhRI

@@ -1,8 +1,4 @@
-const {
-  hashPassword,
-  comparePassword,
-  randomPassword,
-} = require("../helpers/auth.helper");
+const { hashPassword, comparePassword, randomPassword } = require("../helpers/auth.helper");
 const jwt = require("jsonwebtoken");
 
 require("dotenv").config();
@@ -20,12 +16,12 @@ const signIn = async (req, res, next) => {
   if (isValid) {
     const privateKey = process.env.PRIVATE_KEY;
     const token = jwt.sign(
-      { id: user.id, fullName: user.fullName, sex: user.sex, role: user.role },
+      { id: user.id, email: user.email, fullName: user.fullName, sex: user.sex, role: user.role },
       privateKey
     );
     res.send(token);
   } else {
-    next(createError.Unauthorized("Tai khoan mat khau khong dung"));
+    next(createError.Unauthorized("Tài khoản hoặc mật khẩu không đúng"));
   }
 };
 const signUp = async (req, res) => {

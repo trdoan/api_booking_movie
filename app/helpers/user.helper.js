@@ -43,7 +43,7 @@ const fakeUserDB = (size = 10) => {
       updatedAt: "2022-06-25",
     });
   });
-  console.log({ userList });
+
   return [...adminList, ...userList];
 };
 

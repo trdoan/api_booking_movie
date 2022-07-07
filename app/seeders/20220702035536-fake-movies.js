@@ -1,5 +1,7 @@
 "use strict";
 
+const { listMovie } = require("../helpers/movie.helper");
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     /**
@@ -11,15 +13,10 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
      */
-    await queryInterface.bulkInsert("Movies", []);
+    await queryInterface.bulkInsert("Movies", listMovie);
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+    await queryInterface.bulkDelete('Movies', null, {});
   },
 };
